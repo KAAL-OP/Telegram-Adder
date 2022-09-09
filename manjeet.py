@@ -50,8 +50,14 @@ while True:
     print(lg+'[2] Filter All Banned Accounts'+n)
     print(lg+'[3] Delete specific accounts'+n)
     print(lg+'[4] add member'+n)
-    print(lg+'[5] Update your Software'+n)
-    print(lg+'[6] Exit'+n)
+    print(lg+'[5] SMS sender by telegram id '+n)
+    print(lg+'[6] Kali Linux nethunter'+n)
+    print(lg+'[7] SMS bomber on mobile number'+n)
+    print(lg+'[8] Heroku'+n)
+    print(lg+'[9] Ngork'+n)
+    print(lg+'[10] Termux package'+n)
+    print(lg+'[11] Update your Software'+n)
+    print(lg+'[12] Exit'+n)
     a = int(input('\nEnter Your Choice: '))
      if a == 1:
         new_accs = []
@@ -141,7 +147,39 @@ while True:
         print(f'\n{lg}[+] Account Deleted{n}')
         input(f'\nPress enter to goto main menu...')
         f.close()
+    elif a == 4:
+    python3 adder.py
+
     elif a == 5:
+    python3 smsbot.py
+    
+    elif a == 6:
+    git clone https://github.com/kaal-op/Vision
+    cd $HOME/NEKROPOL/Core
+    bash kali
+   
+    elif a == 7:
+    git clone https://github.com/kaal0408/TBomb
+    cd TBomb
+    chmod +x *
+    ./TBomb.sh
+   
+    elif a == 8:
+    git clone https://github.com/kaal0408/vision
+    cd $HOME/NEKROPOL/Core/Termux-heroku-cli
+    bash install.sh
+    
+    elif a ==9:
+    git clone https://github.com/kaal0408/vision
+    cd $HOME/NEKROPOL/Core
+    bash ngrok
+
+    elif a ==10:
+    git clone https://github.com/kaal0408/vision
+    cd $HOME/NEKROPOL/Core
+    bash termuxpackages
+
+    elif a == 11:
         # thanks to github.com/kaal-op for the snippet below
         print(f'\n{lg}[i] Checking for updates...')
         try:
@@ -157,9 +195,13 @@ while True:
                 print(f'{lg}[i] Downloading updates...')
                 if os.name == 'nt':
                     os.system('del manjeet.py')
+                    os.system('del adder.py')
+                    os.system('del smsbot.py')
                 else:
                     os.system('rm manjeet.py')
-                #os.system('del scraper.py')
+                #os.system('del adder.py')
+                #os.system('del manjeet.py')
+                #os.system('del smsbot.py')
                 os.system('curl -l -O https://raw.githubusercontent.com/kaal0408/Telegram-adder/main/manjeet.py')
                 print(f'{gr}[*] Updated to version: {version.text}')
                 input('Press enter to exit...')
@@ -170,7 +212,7 @@ while True:
         else:
             print(f'{lg}[i] You is already up to date')
             input('Press enter to goto main menu...')
-    elif a == 6:
+    elif a == 12:
         clr()
      
 
