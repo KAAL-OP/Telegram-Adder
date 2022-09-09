@@ -37,18 +37,7 @@ minus = w + '[' + lg + '-' + w + ']' + rs
 
 def banner():
     # fancy logo
-    b = [
-  ' ██████╗░███████╗██╗░░██╗ ',
-  ' ██╔══██╗██╔════╝╚██╗██╔╝ ',
-  ' ██████╔╝█████╗░░░╚███╔╝░ ',
-  ' ██╔══██╗██╔══╝░░░██╔██╗░ ',
-  ' ██║░░██║███████╗██╔╝╚██╗ ',
-  ' ╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝ ',
-    ]
-    for char in b:
-        print(f'{random.choice(colors)}{char}{rs}')
-    #print('Shivansh YouTube channel- https://youtube.com/channel/UCpZBwvZJdRsInUBgAWfpVMA')
-    print(f'{lg}   Version: {w}1.0{lg} | Author: {w}REX{rs}\n')
+    b = [Thanks pro & kaal-op ]
 
 
 # function to clear screen
@@ -172,16 +161,16 @@ for acc in to_use:
             g_hash = scraped_grp.split('/joinchat/')[1]
             try:
                 c(ImportChatInviteRequest(g_hash))
-                print(f'{plus}{grey} User: {cy}{acc_name}{lg} -- Joined group to scrape')
+                print(f'{plus}{grey} User: {cy}{acc_name}{lg}-- {cy}{user_id}(lg) -- Joined group to scrape')
             except UserAlreadyParticipantError:
                 pass 
         else:
             c(JoinChannelRequest(scraped_grp))
-            print(f'{plus}{grey} User: {cy}{acc_name}{lg} -- Joined group to scrape')
+            print(f'{plus}{grey} User: {cy}{acc_name}{lg}-- {cy}{user_id}(lg)  -- Joined group to scrape')
         scraped_grp_entity = c.get_entity(scraped_grp)
         if choice == 0:
             c(JoinChannelRequest(target))
-            print(f'{plus}{grey} User: {cy}{acc_name}{lg} -- Joined group to add')
+            print(f'{plus}{grey} User: {cy}{acc_name}{lg}-- {cy}{user_id}(lg) -- Joined group to add')
             target_entity = c.get_entity(target)
             target_details = InputPeerChannel(target_entity.id, target_entity.access_hash)
         else:
@@ -229,13 +218,14 @@ for acc in to_use:
             print(f'{plus}{grey} User: {cy}{acc_name}{lg} -- {cy}{user_id} {lg}--> {cy}{target_title}')
             #print(f'{info}{grey} User: {cy}{acc_name}{lg} -- Sleep 1 second')
             adding_status += 1
-            print(f'{info}{grey} User: {cy}{acc_name}{lg} -- Sleep {w}{sleep_time} {lg}second(s)')
+            print(f'{info}{grey} User: {cy}{acc_name}{lg} -- {cy}{user_id} --  Sleep {w}{sleep_time} {lg}second(s)')
+            
             time.sleep(sleep_time)
         except UserPrivacyRestrictedError:
-            print(f'{minus}{grey} User: {cy}{acc_name}{lg} -- {r}User Privacy Restricted Error')
+            print(f'{minus}{grey} User: {cy}{acc_name}{lg} -- {cy}{user_id} -- {r}User Privacy Restricted Error')
             continue
         except PeerFloodError:
-            print(f'{error}{grey} User: {cy}{acc_name}{lg} -- {r}Peer Flood Error.')
+            print(f'{error}{grey} User: {cy}{acc_name}{lg} -- {cy}{user_id}-- {r}Peer Flood Error.')
             peer_flood_status += 1
             continue
         except ChatWriteForbiddenError:
@@ -244,13 +234,13 @@ for acc in to_use:
                 log_status(scraped_grp, index)
             exit_window()
         except UserBannedInChannelError:
-            print(f'{error}{grey} User: {cy}{acc_name}{lg} -- {r}Banned from writing in groups')
+            print(f'{error}{grey} User: {cy}{acc_name}{lg} -- {cy}{user_id}-- {r}Banned from writing in groups')
             break
         except ChatAdminRequiredError:
-            print(f'{error}{grey} User: {cy}{acc_name}{lg} -- {r}Chat Admin rights needed to add')
+            print(f'{error}{grey} User: {cy}{acc_name}{lg} -- {cy}{user_id}-- {r}Chat Admin rights needed to add')
             break
         except UserAlreadyParticipantError:
-            print(f'{minus}{grey} User: {cy}{acc_name}{lg} -- {r}User is already a participant')
+            print(f'{minus}{grey} User: {cy}{acc_name}{lg} -- {cy}{user_id}--  {r}User is already a participant')
             continue
         except FloodWaitError as e:
             print(f'{error}{r} {e}')
